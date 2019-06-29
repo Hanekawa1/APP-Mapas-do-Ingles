@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngFor="let usuarioLogado of usuarioLogado">
+        Atividade 04 - Módulo {{usuarioLogado.moduloInicial}} - Dia {{usuarioLogado.statusDia}}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+    <form id="atividade4-form5" class="list">
+        <div id="atividade4-markdown7" class="show-list-numbers-and-dots">
+          <h2 style="color:#000000;">Escreva a frase que será ditada pelo áudio:</h2>
+        </div>
+        <ion-list>
+          <ion-item navi-clear="" menu-close="" ng-click="play()">
+            <div class="leanback-player-audio" width="350px">
+              <audio pré-carregamento="metadados" controls="">
+                <source *ngFor="let atividade04 of atividade04" src="{{atividade04.audioAtividade04}}" type="audio/mp4" codecs="mp4a.40.2">
+  
+              </audio>
+            </div>
+          </ion-item>
+        </ion-list>
+        <div id="atividade4-markdown10" class="show-list-numbers-and-dots">
+          <p style="color:#000000;font-size: 1.7rem;font-weight: bold;">Digite a frase:</p>
+        </div>
+        <ion-item >
+          <ion-textarea style="height: 150px;"></ion-textarea> 
+        </ion-item>
+        <ion-item>
+            <button ion-button icon-end large bottom (click)="checked()"> Verificar resposta </button>
+        </ion-item>
+      </form>
+
+      <div *ngIf="check" style="padding-top: 10px;">
+        <ion-item text-wrap class="questao" *ngFor="let atividade04 of atividade04">
+          Frase correta: {{atividade04.textoAtividade04}}
+        </ion-item>
+
+          <button ion-button icon-end large bottom (click)="proxAtividade05()">
+              Proxima
+              <ion-icon name="md-arrow-round-forward"></ion-icon>
+          </button>
+      </div>
+</ion-content>

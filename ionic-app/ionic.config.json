@@ -1,0 +1,7 @@
+{
+  "name": "AppPI",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,51 @@
+<ion-content scroll="false">
+    <div class="splash-bg"></div>
+    <div class="splash-info">
+      <div class="splash-logo"></div>
+      <div class="splash-intro">
+        Mapas do Inglês
+      </div>
+    </div>
+    <div padding>
+      <form (ngSubmit)="efetuaLogin()" >
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Senha</ion-label>
+            <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
+          </ion-item>
+          <button ion-button block type="submit" class="login">Entrar</button>
+      </form>
+    </div>
+  </ion-content>
+  
+<!--
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  style="background-image: url(./assets/imgs/fundo1.jpg);" padding>
+  <h2 class="login_title">Bem vindo ao Aplicativo de Idiomas "Mapas do Inglês"</h2>
+  
+  <form (ngSubmit)="efetuaLogin()">
+    <ion-item>
+      <ion-label floating>Login</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Senha</ion-label>
+      <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
+    </ion-item>
+
+    <div style="padding: 30px;">
+    <button ion-button block type="submit">Entrar</button>
+    </div>
+  </form>
+</ion-content>
+-->

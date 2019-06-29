@@ -1,0 +1,30 @@
+page-dias {
+    .content{
+        background-image: url('../../assets/imgs/study-icon-7859.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
+    h1.dia{
+        color: darkred;
+        font-weight: bold;
+        text-align: center;
+        background-color: white !important;
+    }
+    .title{
+        text-align: justify;
+        color: black;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    .p{
+        font-size: 22px;
+        text-align: center;
+        color: black;
+        font-weight: bold;
+        border-bottom: 1px gray solid;
+        padding-bottom: 10px;
+    }
+    ion-item.item.item-block.item-md {
+        background: transparent;
+    }
+}

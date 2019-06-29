@@ -1,0 +1,14 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dia de Atividades</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+  <ion-item (click)="selecionaAtividade()">
+    <h1 class="dia" *ngFor="let usuarioLogado of usuarioLogado">Dia {{usuarioLogado.statusDia}}</h1>
+  </ion-item>
+</ion-content>

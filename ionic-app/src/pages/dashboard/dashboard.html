@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <div>
+      <h2>Usuário logado no momento:</h2>
+    </div>
+  </ion-item>
+  <h1>Confira suas atividades aqui.</h1>
+  <ion-item (click)="selecionaAtividade()">
+    <h2>Módulo 01 Dia 01</h2>
+  </ion-item>
+  <ion-item (click)="selecionaAtividade()">
+    <h2>Módulo 01 Dia 02</h2>
+  </ion-item>
+  <ion-item (click)="selecionaAtividade()">
+    <h2>Módulo 01 Dia 03</h2>
+  </ion-item>
+</ion-content>

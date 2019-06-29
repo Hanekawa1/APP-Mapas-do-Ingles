@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngFor="let usuarioLogado of usuarioLogado">
+        Atividade 05 - Módulo {{usuarioLogado.moduloInicial}} - Dia {{usuarioLogado.statusDia}}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+    <div id="atividade5-markdown8" class="show-list-numbers-and-dots">
+        <h2 style="color:#000000;">Grave o áudio referente ao texto abaixo:</h2>
+      </div>
+        <ion-item text-wrap *ngFor="let atividade05 of atividade05" no-lines>      
+            {{atividade05.textoAtividade05}}
+        </ion-item>
+      <div class="row">
+            <div class="col-sm-4">
+                <button ion-fab (click)="capturaAudio()">
+                    <ion-icon name="md-mic" icon-start></ion-icon>
+                </button>
+            </div>
+      </div>
+      <!-- Mostrar aqui depois de gravar o audio -->
+      <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
+        {{ file.name }}
+        <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+      </ion-item>
+      <div>
+          <button ion-button icon-end large bottom (click)="finalizaAtividades()">Concluir</button>
+      </div>
+</ion-content>

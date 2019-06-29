@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar><!-- Retornar o dia e o módulo aqui-->
+    <ion-title *ngFor="let usuarioLogado of usuarioLogado">
+      Atividade 01 - Módulo {{usuarioLogado.moduloInicial}} - Dia {{usuarioLogado.statusDia}} 
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<!--Puxar o conteúdo do banco de dados de acordo com o dia e modulo previamente selecionados-->
+<ion-content class="content" padding>
+  <div id="atividade1-markdown9" class="show-list-numbers-and-dots">
+    <h2 style="color:#000000;">Ouça e acompanhe a leitura do texto 5 vezes:</h2>
+  </div>
+  <ion-item class="atividade-texto" text-wrap *ngFor="let atividade01 of atividade01">
+    {{atividade01.textoAtividade01}}
+  </ion-item>
+  <ion-list>
+    <ion-item nav-clear="" menu-close="" ng-click="player()">
+      <div class="leanback-player-audio" width="350px">
+        <audio pré-carregamento="metadados" controls="">
+          <source *ngFor="let atividade01 of atividade01" src="{{atividade01.audioAtividade01}}" type="audio/mp3" codecs="mp3a.40.2">
+        </audio>
+      </div>
+      
+      <!-- Adicionar um texto aqui para a leitura -->
+    </ion-item>
+  </ion-list>
+  <div>
+  <button ion-button icon-end large bottom (click)="proxAtividade02()">
+      Proxima
+      <ion-icon name="md-arrow-round-forward"></ion-icon>
+  </button>
+</div>
+
+</ion-content>

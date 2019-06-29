@@ -1,0 +1,31 @@
+<ion-split-pane>
+<ion-menu [content]="conteudo" *ngIf="usuarioLogado">
+    <ion-content class="fundo">
+        <ion-item>
+            <div>
+                <!-- Logo da empresa em modo avatar-->
+                <ion-avatar>
+                    <img src="assets/imgs/logo.png">
+                </ion-avatar>
+                <h1>Mapas do Inglês</h1>
+            </div>
+        </ion-item>
+        <ion-item>
+            <div>
+                <h2>Usuário Conectado</h2>
+                <!-- Email do usuário é pra ser mostrado aqui de acordo com o login-->
+            </div>
+        </ion-item>
+
+
+    <ion-list>
+        <button ion-item menuClose *ngFor="let pagina of paginas" (click)="irParaPagina(pagina.componente)">
+            <ion-icon [name]="pagina.icone" item-left></ion-icon>
+            {{pagina.titulo}}
+        </button>
+    </ion-list>
+    </ion-content>
+    <div class="footer"></div>
+</ion-menu>
+<ion-nav [root]="rootPage" #conteudo main swipeBackEnabled="false"></ion-nav>
+</ion-split-pane>

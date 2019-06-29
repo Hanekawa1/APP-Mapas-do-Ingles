@@ -1,0 +1,8 @@
+{
+    "/api" : {
+        "target" : "http://testeapi:443/api/cadastros", 
+        "secure" : false,
+        "logLevel" : "debug",
+        "changeOrigin": true
+    }
+}

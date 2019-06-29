@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngFor="let usuarioLogado of usuarioLogado">
+        Atividade 03 - Módulo {{usuarioLogado.moduloInicial}} - Dia {{usuarioLogado.statusDia}}
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+    <div id="atividade3-markdown2" class="show-list-numbers-and-dots">
+        <h2 style="color:#000000;">Marque a opção que corresponde a imagem abaixo:</h2>
+      </div>
+      <div>
+      <ion-item>
+        <img class="imagem" width="240" height="240" *ngFor="let atividade03 of atividade03" src="{{atividade03.imagemAtividade03}}">
+      </ion-item>
+      </div>
+
+      <ion-item *ngFor="let resposta of respostas" no-lines class="questao js-item" id="js-item">
+        <ion-label text-wrap>{{resposta}}</ion-label>
+        <ion-checkbox name="itemCheck" color="dark" checked="false"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <button ion-button icon-end large bottom (click)="checked()"> Verificar resposta </button>
+      </ion-item>
+
+      <div *ngIf="check" style="padding-top: 10px;">
+          <ion-item class="questao" text-wrap *ngFor="let atividade03 of atividade03">
+              Resposta Correta: {{atividade03.respostaCorretaAtividade03}}
+          </ion-item>
+          <button ion-button icon-end large bottom (click)="proxAtividade04()">
+              Proxima
+              <ion-icon name="md-arrow-round-forward"></ion-icon>
+          </button>
+      </div>
+</ion-content>

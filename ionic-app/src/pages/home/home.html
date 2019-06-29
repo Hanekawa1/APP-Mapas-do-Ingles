@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content" padding>
+
+    <ion-item id="cabecalho-menu" class="cabecalho-menu">
+    <div>
+      <ion-avatar item-start float-left>
+        <img src="../../assets/img/avatar-padrao.jpg">
+      </ion-avatar>
+      <h2 class="usuarioTitle">Usuário logado agora:</h2>
+      <p *ngFor="let usuarioLogado of usuarioLogado">{{usuarioLogado.email}}</p>
+    </div>
+  </ion-item>
+
+  <h1 class="title-modulo">Acesse o módulo atual de estudo aqui</h1>
+
+  <ion-item (click)="selecionaDia()" no-lines>
+    <h1 class="modulo" *ngFor="let usuarioLogado of usuarioLogado">Módulo {{usuarioLogado.moduloInicial}}</h1>
+  </ion-item>
+  <ion-item text-wrap class="notify">
+    Clique no botão abaixo para você ser notificado sobre sua próxima atividade
+  <button ion-button full (click)="agendarNotificacao()">Notificar-me!</button>
+  </ion-item>
+</ion-content>

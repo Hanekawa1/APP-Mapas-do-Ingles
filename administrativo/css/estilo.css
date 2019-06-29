@@ -1,0 +1,26 @@
+#navbar{
+
+	font-family: 'Hind', sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
+    line-height: 1.5;
+    color: black;
+}
+#navbar a:hover{
+    background-color: #3A5FCD;
+    color: black;
+}
+.corpo{
+	/*background-color: #00B2EE;*/
+}
+.table{
+	background-color: #EEE9E9;
+}
+.h3{
+	text-align: center;
+	font-family: Book Antiqua;
+}
+.table{
+	margin: auto;
+	width: 90%;
+}
